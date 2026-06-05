@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ugua Asset Management | Consultoría Estratégica y Gestión de Activos</title>
+<meta name="description" content="Firma especializada en consultoría estratégica, gestión de activos y soluciones legales corporativas. Protegemos tu patrimonio con respaldo jurídico.">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --accent:#D6B15E;
+  --accent-dark:#B88A36;
+  --dark:#062244;
+  --darker:#031A34;
+  --ink:#062244;
+  --gray:#666666;
+  --line:#D9D9D9;
+  --soft:#F5F5F5;
+  --white:#ffffff;
+  --title:'Cormorant Garamond',serif;
+  --body:'Montserrat',sans-serif;
+  --radius:14px;
+  --shadow:0 18px 50px -20px rgba(3,26,52,.4);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--white);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,92%);margin-inline:auto}
+section{padding:90px 0}
+h1,h2,h3{font-family:var(--title);font-weight:600;line-height:1.12;color:var(--ink)}
+.eyebrow{font-family:var(--body);font-weight:600;letter-spacing:.18em;text-transform:uppercase;font-size:.78rem;color:var(--accent-dark);display:inline-flex;align-items:center;gap:.5rem}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--accent)}
+.sec-head{max-width:740px;margin:0 auto 56px;text-align:center}
+.sec-head h2{font-size:clamp(2.2rem,4.4vw,3.1rem);margin:12px 0}
+.sec-head p{color:var(--gray)}
+.btn{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--body);font-weight:600;font-size:.95rem;padding:14px 28px;border-radius:50px;cursor:pointer;border:2px solid transparent;transition:.25s;white-space:nowrap}
+.btn-primary{background:var(--accent);color:var(--darker)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px -10px rgba(214,177,94,.7)}
+.btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+.btn-ghost:hover{background:#fff;color:var(--darker)}
+.btn-dark{background:var(--dark);color:#fff}
+.btn-dark:hover{background:var(--darker)}
+
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);transition:.3s}
+.nav{display:flex;align-items:center;justify-content:space-between;height:86px}
+.brand{display:flex;align-items:center;gap:.7rem;font-weight:700}
+.brand img{height:68px;width:auto;border-radius:50%}
+.menu{display:flex;align-items:center;gap:34px;list-style:none}
+.menu a{font-weight:500;font-size:.95rem;color:var(--ink);transition:.2s}
+.menu a:hover{color:var(--accent-dark)}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer}
+.burger span{width:26px;height:3px;background:var(--ink);border-radius:3px}
+
+.hero{position:relative;min-height:90vh;display:flex;align-items:center;color:#fff;overflow:hidden;padding:120px 0 90px;background:linear-gradient(90deg,var(--darker) 0%,rgba(3,26,52,.92) 34%,rgba(3,26,52,.5) 72%,rgba(3,26,52,.32) 100%),linear-gradient(0deg,rgba(3,26,52,.6),rgba(3,26,52,0) 45%),url('assets/hero.jpg') center/cover no-repeat}
+.hero-grid{display:block;max-width:600px;margin-left:clamp(28px,5vw,72px);margin-right:auto;position:relative;z-index:2}
+.hero .eyebrow{color:var(--accent)}
+.hero h1{color:#fff;font-size:clamp(2.6rem,5.4vw,4rem);margin:16px 0 20px}
+.hero h1 span{color:var(--accent)}
+.hero p.lead{color:rgba(255,255,255,.82);font-size:1.08rem;max-width:540px;margin-bottom:32px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-visual{display:flex;justify-content:center;align-items:center;position:relative}
+.hero-img{position:relative;border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,.16);box-shadow:var(--shadow);max-width:520px;width:100%}
+.hero-img>img{width:100%;height:480px;object-fit:cover;display:block}
+.hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,26,52,0) 45%,rgba(3,26,52,.6));pointer-events:none}
+.hero-badge{position:absolute;left:18px;bottom:18px;z-index:2;background:rgba(255,255,255,.96);border-radius:14px;padding:11px 15px;display:flex;align-items:center;gap:10px;box-shadow:0 12px 30px -8px rgba(0,0,0,.45)}
+.hero-badge .hb-ic{width:38px;height:38px;border-radius:10px;background:var(--accent);display:flex;align-items:center;justify-content:center;flex:0 0 38px}
+.hero-badge .hb-ic svg{width:20px;height:20px;stroke:var(--darker);fill:none;stroke-width:2.2}
+.hero-badge b{display:block;font-size:.95rem;color:var(--ink);font-family:var(--body);line-height:1.1}
+.hero-badge small{color:var(--gray);font-size:.8rem}
+.hero-chips{display:flex;gap:10px;margin-top:26px;flex-wrap:wrap}
+.chip{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);padding:8px 16px;border-radius:50px;font-size:.82rem;color:#fff;display:flex;align-items:center;gap:.4rem}
+.chip svg{width:15px;height:15px;stroke:var(--accent)}
+
+.stats{background:var(--soft);padding:0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:-50px;position:relative;z-index:5}
+.stat{background:#fff;border-radius:var(--radius);padding:30px 24px;text-align:center;box-shadow:var(--shadow);border-top:4px solid var(--accent)}
+.stat .num{font-family:var(--title);font-size:2.8rem;font-weight:700;color:var(--accent-dark);line-height:1}
+.stat .lbl{margin-top:6px;color:var(--gray);font-weight:500;font-size:.92rem}
+
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px 30px;transition:.3s;position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;left:0;top:0;height:4px;width:0;background:var(--accent);transition:.3s}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
+.card:hover::before{width:100%}
+.card .ico{width:58px;height:58px;border-radius:14px;background:var(--darker);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.card .ico svg{width:28px;height:28px;stroke:var(--accent);fill:none;stroke-width:1.8}
+.card h3{font-size:1.45rem;margin-bottom:8px}
+.card p{color:var(--gray);font-size:.94rem}
+
+.why{background:var(--darker);color:#fff}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.why .eyebrow{color:var(--accent)}
+.why h2{color:#fff;font-size:clamp(2.2rem,4.4vw,3rem);margin:12px 0 18px}
+.why p.lead{color:rgba(255,255,255,.8);margin-bottom:28px}
+.feat{display:flex;gap:16px;margin-bottom:22px}
+.feat .fi{flex:0 0 46px;height:46px;border-radius:12px;background:rgba(214,177,94,.16);display:flex;align-items:center;justify-content:center}
+.feat .fi svg{width:22px;height:22px;stroke:var(--accent);fill:none;stroke-width:1.8}
+.feat h4{font-family:var(--body);font-weight:600;margin-bottom:3px}
+.feat p{color:rgba(255,255,255,.7);font-size:.92rem}
+.why-card{background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.01));border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:40px}
+.why-card .big{font-family:var(--title);font-size:4.6rem;font-weight:700;color:var(--accent);line-height:1}
+.why-card .big-l{color:rgba(255,255,255,.85);margin-bottom:26px}
+.bar{height:8px;border-radius:6px;background:rgba(255,255,255,.12);margin-bottom:6px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent);border-radius:6px}
+.bar-row{margin-bottom:18px}
+.bar-row span{display:flex;justify-content:space-between;font-size:.88rem;margin-bottom:7px;color:rgba(255,255,255,.85)}
+
+.tst-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.tst{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px;position:relative}
+.tst .q{font-family:var(--title);font-size:3.4rem;color:var(--accent);line-height:.5;height:26px}
+.tst p{color:var(--gray);font-style:italic;margin:14px 0 20px}
+.tst .who{display:flex;align-items:center;gap:12px}
+.tst .av{width:46px;height:46px;border-radius:50%;background:var(--darker);color:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--title);font-size:1.2rem}
+.tst .who b{display:block;font-family:var(--body)}
+.tst .who small{color:var(--gray)}
+.stars{color:var(--accent);margin-bottom:6px;letter-spacing:2px}
+
+.cta-banner{background:linear-gradient(120deg,var(--dark),var(--darker));color:#fff;text-align:center}
+.cta-banner h2{color:#fff;font-size:clamp(2.2rem,4.4vw,3.1rem)}
+.cta-banner p{color:rgba(255,255,255,.82);max-width:560px;margin:14px auto 30px}
+
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+.contact-info h2{font-size:clamp(2rem,4vw,2.8rem);margin:12px 0 18px}
+.contact-info p{color:var(--gray);margin-bottom:26px}
+.cinfo{display:flex;gap:14px;margin-bottom:18px;align-items:center}
+.cinfo .ci{width:46px;height:46px;border-radius:12px;background:var(--soft);display:flex;align-items:center;justify-content:center}
+.cinfo .ci svg{width:22px;height:22px;stroke:var(--accent-dark);fill:none;stroke-width:1.8}
+.cinfo b{display:block}.cinfo span{color:var(--gray);font-size:.92rem}
+form{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px;box-shadow:var(--shadow)}
+form label{font-size:.85rem;font-weight:600;display:block;margin-bottom:6px}
+form input,form textarea{width:100%;padding:13px 16px;border:1px solid var(--line);border-radius:10px;font-family:var(--body);font-size:.95rem;margin-bottom:18px;transition:.2s}
+form input:focus,form textarea:focus{outline:none;border-color:var(--accent-dark);box-shadow:0 0 0 3px rgba(184,138,54,.15)}
+form .btn{width:100%;justify-content:center}
+
+footer{background:var(--darker);color:rgba(255,255,255,.7);padding:70px 0 0}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:40px;padding-bottom:50px}
+.foot-brand .fb-name{font-family:var(--title);font-weight:700;font-size:1.8rem;color:#fff;margin-bottom:12px}
+.foot-brand p{font-size:.92rem}
+footer h5{color:#fff;font-family:var(--body);font-weight:600;margin-bottom:18px;font-size:1rem}
+footer ul{list-style:none}
+footer ul li{margin-bottom:11px}
+footer ul a{font-size:.92rem;transition:.2s}
+footer ul a:hover{color:var(--accent)}
+.subs{display:flex;gap:8px;margin-top:14px}
+.subs input{flex:1;padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#fff;font-family:var(--body)}
+.subs input::placeholder{color:rgba(255,255,255,.5)}
+.subs button{background:var(--accent);color:var(--darker);border:0;border-radius:10px;padding:0 18px;font-weight:700;cursor:pointer}
+.socials{display:flex;gap:12px;margin-top:18px}
+.socials a{width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;transition:.2s}
+.socials a:hover{background:var(--accent)}
+.socials svg{width:18px;height:18px;fill:#fff}
+.socials a:hover svg{fill:var(--darker)}
+.copy{border-top:1px solid rgba(255,255,255,.12);padding:22px 0;text-align:center;font-size:.85rem}
+
+.wa{position:fixed;right:22px;bottom:22px;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px -6px rgba(37,211,102,.6);z-index:60;animation:pulse 2.4s infinite}
+.wa svg{width:30px;height:30px;fill:#fff}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+
+@media(max-width:900px){
+  .hero-grid,.why-grid,.contact-grid{grid-template-columns:1fr}
+  .hero-visual{order:-1}.hero-img>img{height:300px}
+  .services-grid,.tst-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .menu{position:fixed;inset:86px 0 auto 0;background:#fff;flex-direction:column;padding:24px;gap:18px;border-bottom:1px solid var(--line);transform:translateY(-10px);opacity:0;visibility:hidden;pointer-events:none;z-index:45;transition:.25s}
+  .menu.open{transform:translateY(0);opacity:1;visibility:visible;pointer-events:auto}
+  .burger{display:flex}.nav-cta .btn{display:none}
+  section{padding:64px 0}
+}
+@media(max-width:560px){.stats-grid,.foot-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.brand img{height:52px}}</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#"><img src="assets/logo.png" alt="Ugua Asset Management"></a>
+    <ul class="menu" id="menu">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#contacto">Contáctanos</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#contacto" class="btn btn-dark">Agendar cita</a>
+      <button class="burger" id="burger" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Consultoría · Gestión de Activos</span>
+      <h1>Protege hoy lo que <span>construiste</span> para mañana</h1>
+      <p class="lead">Firma especializada en consultoría estratégica y gestión de activos. Brindamos soluciones corporativas y personalizadas para optimizar la eficiencia y la seguridad operativa de nuestros clientes en la región.</p>
+      <div class="hero-actions">
+        <a href="#contacto" class="btn btn-primary">Agendar cita</a>
+        <a href="#servicios" class="btn btn-ghost">Ver servicios</a>
+      </div>
+      <div class="hero-chips">
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Respaldo legal</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Protección de patrimonio</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Atención personalizada</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat"><div class="num" data-count="15">0</div><div class="lbl">Años de experiencia</div></div>
+      <div class="stat"><div class="num" data-count="1200">0</div><div class="lbl">Casos atendidos</div></div>
+      <div class="stat"><div class="num" data-count="10">0</div><div class="lbl">Áreas del derecho</div></div>
+      <div class="stat"><div class="num" data-count="98">0</div><div class="lbl">% Clientes satisfechos</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="servicios">
+  <div class="container">
+    <div class="sec-head">
+      <span class="eyebrow">Nuestros servicios</span>
+      <h2>Soluciones legales y corporativas a tu medida</h2>
+      <p>Te acompañamos en cada decisión jurídica con estrategia, claridad y respaldo, protegiendo tus intereses y tu patrimonio.</p>
+    </div>
+    <div class="services-grid">
+      <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></div><h3>Redacción y Revisión de Contratos</h3><p>Elaboramos y revisamos contratos para proteger tus intereses y prevenir futuros conflictos legales, asegurando validez y claridad.</p></article>
+      <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l8-4 8 4v14M9 9h.01M9 13h.01M9 17h.01"/></svg></div><h3>Saneamiento de Propiedades</h3><p>Regularizamos tu inmueble: títulos de propiedad, independizaciones, sucesiones y trámites registrales.</p></article>
+      <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/><circle cx="12" cy="12" r="10"/></svg></div><h3>Consultoría para Emprendedores</h3><p>Asesoría legal para negocios y startups: contratos, formalización, protección legal y prevención de riesgos.</p></article>
+      <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 014-4h4a4 4 0 014 4v2M16 3.13a4 4 0 010 7.75M21 21v-2a4 4 0 00-3-3.87"/></svg></div><h3>Derecho de Familia</h3><p>Orientación en procesos de divorcio, pensión de alimentos, tenencia, régimen de visitas y acuerdos familiares.</p></article>
+      <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div><h3>Trámites Notariales y Legales</h3><p>Gestionamos documentos, poderes, declaraciones juradas y otros trámites necesarios de forma ágil y segura.</p></article>
+      <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Defensa y Representación Legal</h3><p>Te representamos en procesos judiciales y administrativos, defendiendo tus derechos con estrategia y respaldo legal.</p></article>
+      <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 21h18M6 21V10l6-5 6 5v11M10 21v-5h4v5"/></svg></div><h3>Constitución de Empresas</h3><p>Te ayudamos a formalizar tu negocio desde cero: elección del tipo de empresa, redacción de documentos y registro legal.</p></article>
+      <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></div><h3>Derecho Laboral</h3><p>Asesoría para trabajadores y empleadores en despidos, liquidaciones, contratos laborales y defensa de derechos.</p></article>
+      <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 7l7-4 7 4M5 7v6a7 7 0 0014 0V7M3 13h4M17 13h4"/></svg></div><h3>Derecho Civil</h3><p>Asesoría en obligaciones, contratos, indemnizaciones, propiedad, desalojos y resolución de conflictos entre particulares.</p></article>
+      <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3M12 17h.01"/></svg></div><h3>Asesoría Legal Integral</h3><p>Orientación jurídica personalizada para resolver tus dudas de manera clara, rápida y confiable en distintas áreas del derecho.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="nosotros">
+  <div class="container why-grid">
+    <div>
+      <span class="eyebrow">Nosotros</span>
+      <h2>¿Por qué somos tu mejor opción?</h2>
+      <p class="lead">En Ugua Asset Management unimos visión estratégica y seguridad jurídica para proteger lo que más valoras: tu patrimonio, tu empresa y tu tranquilidad.</p>
+      <div class="feat"><div class="fi"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/></svg></div><div><h4>Seguridad jurídica</h4><p>Cada acuerdo y trámite respaldado con rigor legal.</p></div></div>
+      <div class="feat"><div class="fi"><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg></div><div><h4>Atención personalizada</h4><p>Soluciones a la medida de tu situación, no plantillas.</p></div></div>
+      <div class="feat"><div class="fi"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div><div><h4>Visión estratégica</h4><p>Anticipamos riesgos para que decidas con claridad.</p></div></div>
+    </div>
+    <div class="why-card">
+      <div class="big">+15</div>
+      <div class="big-l">años brindando seguridad jurídica y gestión de activos en la región</div>
+      <div class="bar-row"><span>Casos resueltos con éxito <b>96%</b></span><div class="bar"><i style="width:96%"></i></div></div>
+      <div class="bar-row"><span>Clientes que regresan <b>90%</b></span><div class="bar"><i style="width:90%"></i></div></div>
+      <div class="bar-row"><span>Satisfacción del cliente <b>98%</b></span><div class="bar"><i style="width:98%"></i></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <div class="sec-head"><span class="eyebrow">Testimonios</span><h2>Lo que dicen nuestros clientes</h2></div>
+    <div class="tst-grid">
+      <article class="tst"><div class="q">”</div><div class="stars">★★★★★</div><p>Sanearon el título de mi propiedad que llevaba años en trámite. Profesionales, claros y muy atentos.</p><div class="who"><div class="av">LM</div><div><b>Lucía Mendoza</b><small>Propietaria</small></div></div></article>
+      <article class="tst"><div class="q">”</div><div class="stars">★★★★★</div><p>Constituyeron mi empresa y revisaron todos mis contratos. Me dieron seguridad para crecer sin riesgos.</p><div class="who"><div class="av">AR</div><div><b>Andrés Rojas</b><small>Emprendedor</small></div></div></article>
+      <article class="tst"><div class="q">”</div><div class="stars">★★★★★</div><p>Me representaron en un proceso complicado y ganamos. Estrategia legal de primer nivel.</p><div class="who"><div class="av">CV</div><div><b>Carmen Vega</b><small>Cliente particular</small></div></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container">
+    <h2>Tu tranquilidad es nuestra prioridad</h2>
+    <p>Protege tu patrimonio y resuelve tus asuntos legales con un equipo que trabaja por ti. Agenda una consulta sin compromiso.</p>
+    <a href="#contacto" class="btn btn-primary">Agendar cita</a>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="container contact-grid">
+    <div class="contact-info">
+      <span class="eyebrow">Contáctanos</span>
+      <h2>Conversemos sobre tu caso</h2>
+      <p>Cuéntanos tu situación y agenda una consulta con nuestros especialistas. Te respondemos en menos de 24 horas.</p>
+      <div class="cinfo"><div class="ci"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><b>Ubicación</b><span>Atención presencial y remota en la región</span></div></div>
+    </div>
+    <form onsubmit="event.preventDefault();this.reset();alert('¡Gracias! Te contactaremos muy pronto.');">
+      <label>Nombre completo</label><input type="text" placeholder="Tu nombre" required>
+      <label>Correo electrónico</label><input type="email" placeholder="tucorreo@email.com" required>
+      <label>¿En qué podemos ayudarte?</label><textarea rows="4" placeholder="Describe brevemente tu caso o consulta"></textarea>
+      <button class="btn btn-primary" type="submit">Solicitar mi cita</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container foot-grid">
+    <div class="foot-brand">
+      <div class="fb-name">Ugua Asset Management</div>
+      <p>Consultoría estratégica, gestión de activos y soluciones legales corporativas para proteger tu patrimonio.</p>
+      
+    </div>
+    <div><h5>Servicios</h5><ul>
+      <li><a href="#servicios">Contratos</a></li>
+      <li><a href="#servicios">Saneamiento de Propiedades</a></li>
+      <li><a href="#servicios">Constitución de Empresas</a></li>
+      <li><a href="#servicios">Defensa Legal</a></li>
+    </ul></div>
+    <div><h5>Legal</h5><ul>
+      <li><a href="politica-privacidad.html">Políticas de privacidad</a></li>
+      <li><a href="terminos-condiciones.html">Términos y condiciones</a></li>
+      <li><a href="aviso-legal.html">Aviso legal</a></li>
+      <li><a href="politica-cookies.html">Política de Cookies</a></li>
+    </ul></div>
+    <div><h5>Síguenos</h5>
+      <p style="font-size:.92rem">Síguenos en nuestras redes y forma parte de nuestra comunidad.</p>
+      <div class="socials"><a href="https://www.facebook.com/uguaassetmanagement" aria-label="Facebook" target="_blank"><svg viewBox="0 0 24 24"><path d="M13 22v-8h3l.5-3H13V9c0-.9.3-1.5 1.6-1.5H17V5c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4V11H8v3h2.6v8z"/></svg></a></div>
+    </div>
+  </div>
+  <div class="copy">© 2026 Ugua Asset Management. Todos los derechos reservados.</div>
+</footer>
+
+<script>
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.addEventListener('click',()=>menu.classList.toggle('open'));
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+const counters=document.querySelectorAll('.num[data-count]');
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){const el=e.target,t=+el.dataset.count;let n=0;const step=Math.ceil(t/60);const tick=()=>{n+=step;if(n>=t){el.textContent='+'+t;}else{el.textContent='+'+n;requestAnimationFrame(tick);}};tick();io.unobserve(el);}})},{threshold:.5});
+counters.forEach(c=>io.observe(c));
+</script>
+</body>
+</html>
